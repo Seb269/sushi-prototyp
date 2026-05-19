@@ -1,10 +1,11 @@
 :root {
-  --bg: #0f0a08;
-  --surface: #1e1410;
-  --surface-2: #261913;
-  --text: #f4ede6;
-  --accent: #b33a3a;
-  --gold: #b68a52;
+  --bg: #f3ece2;
+  --surface: #fffaf3;
+  --surface-2: #f7efe4;
+  --text: #2f241c;
+  --accent: #9b2f2f;
+  --gold: #a5773b;
+  --wood-dark: #5d3a2a;
 }
 
 * {
@@ -18,7 +19,9 @@ html {
 body {
   margin: 0;
   font-family: "Inter", sans-serif;
-  background: var(--bg);
+  background:
+    repeating-linear-gradient(90deg, rgba(132, 90, 60, 0.045) 0 14px, rgba(122, 84, 56, 0.02) 14px 28px),
+    linear-gradient(180deg, #f7efe4 0%, #efe3d4 100%);
   color: var(--text);
   font-size: 1.1rem;
 }
@@ -30,19 +33,23 @@ h3 {
 }
 
 .hero {
-  min-height: 95vh;
+  min-height: 92vh;
   display: grid;
   place-items: center;
   position: relative;
-  background: radial-gradient(circle at 20% 20%, #4a2a1f, #120c09 65%);
+  background:
+    radial-gradient(circle at 15% 20%, rgba(255, 245, 228, 0.75), transparent 45%),
+    radial-gradient(circle at 90% 10%, rgba(165, 119, 59, 0.26), transparent 30%),
+    linear-gradient(180deg, #ead9c5 0%, #d4b08f 45%, #c4936d 100%);
   text-align: center;
   padding: 2rem;
+  border-bottom: 4px solid rgba(93, 58, 42, 0.28);
 }
 
 .overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(15, 10, 8, 0.35), rgba(15, 10, 8, 0.85));
+  background: linear-gradient(to bottom, rgba(255, 247, 236, 0.12), rgba(52, 34, 24, 0.38));
 }
 
 .hero-content {
@@ -53,22 +60,34 @@ h3 {
 
 .kicker {
   letter-spacing: 0.2rem;
-  color: var(--gold);
+  color: #fff7ea;
+  text-shadow: 0 1px 10px rgba(46, 24, 16, 0.35);
 }
 
 h1 {
   font-size: clamp(2.8rem, 8vw, 5rem);
   margin: 0.2rem 0 1rem;
+  color: #fff8ee;
+  text-shadow: 0 3px 18px rgba(35, 17, 10, 0.5);
+}
+
+h1 span {
+  color: #ffe1b0;
+}
+
+.hero p {
+  color: #fff4e7;
 }
 
 .cta {
   display: inline-block;
   margin-top: 1rem;
-  background: var(--accent);
+  background: linear-gradient(180deg, #b33a3a, #902626);
   color: #fff;
   text-decoration: none;
   padding: 0.85rem 1.4rem;
   border-radius: 999px;
+  box-shadow: 0 8px 20px rgba(90, 30, 30, 0.35);
 }
 
 .section {
@@ -84,10 +103,16 @@ h1 {
   align-items: start;
 }
 
+.chef-card,
+.menu-section,
+#contact {
+  background: var(--surface);
+  border: 1px solid rgba(165, 119, 59, 0.28);
+  box-shadow: 0 8px 24px rgba(70, 44, 29, 0.08);
+}
+
 .chef-card {
   margin: 0;
-  background: var(--surface-2);
-  border: 1px solid rgba(182, 138, 82, 0.35);
   border-radius: 1rem;
   padding: 1rem;
 }
@@ -96,21 +121,21 @@ h1 {
   min-height: 240px;
   display: grid;
   place-items: center;
-  border: 2px dashed rgba(182, 138, 82, 0.6);
+  border: 2px dashed rgba(165, 119, 59, 0.7);
   border-radius: 0.75rem;
-  color: var(--gold);
+  color: #7c5528;
   text-align: center;
   padding: 1rem;
+  background: var(--surface-2);
 }
 
 .chef-card figcaption {
   margin-top: 0.8rem;
-  color: #d4c6b8;
+  color: #775a42;
   font-size: 0.95rem;
 }
 
 .menu-section {
-  background: var(--surface);
   border-radius: 1rem;
 }
 
@@ -126,9 +151,9 @@ h1 {
 }
 
 .menu-tab {
-  border: 1px solid rgba(182, 138, 82, 0.45);
-  background: linear-gradient(180deg, #3a251d, #281813);
-  color: var(--text);
+  border: 1px solid rgba(165, 119, 59, 0.5);
+  background: linear-gradient(180deg, #fff9ef, #f1dfc8);
+  color: #4a3123;
   border-radius: 999px;
   padding: 0.65rem 1.15rem;
   cursor: pointer;
@@ -140,21 +165,26 @@ h1 {
 .menu-tab:hover {
   transform: translateY(-1px);
   border-color: var(--gold);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.28);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 }
 
 .menu-tab.active {
-  background: linear-gradient(180deg, #cc4a4a, #a63131);
-  border-color: #d65d5d;
-  box-shadow: 0 10px 20px rgba(179, 58, 58, 0.35);
+  background: linear-gradient(180deg, #b33a3a, #902626);
+  color: #fff;
+  border-color: #a33232;
+  box-shadow: 0 10px 20px rgba(179, 58, 58, 0.22);
 }
 
 .menu-panel {
   display: none;
-  border: 1px solid rgba(182, 138, 82, 0.35);
+  border: 1px solid rgba(165, 119, 59, 0.35);
   border-radius: 0.8rem;
   padding: 1.2rem;
-  background: #221510;
+  background: linear-gradient(180deg, #fffdf8, #fff6ea);
+}
+
+.menu-panel li {
+  margin-bottom: 0.45rem;
 }
 
 .menu-panel.active {
@@ -173,7 +203,7 @@ h1 {
   left: 1rem;
   z-index: 20;
   border: 0;
-  background: var(--accent);
+  background: linear-gradient(180deg, #b33a3a, #8d2525);
   color: white;
   width: 52px;
   height: 52px;
@@ -185,13 +215,13 @@ h1 {
 .quick-nav {
   position: fixed;
   top: 0;
-  left: -280px;
-  width: 260px;
+  left: -290px;
+  width: 270px;
   height: 100vh;
-  background: #1a100c;
-  border-right: 1px solid rgba(182, 138, 82, 0.35);
+  background: linear-gradient(180deg, #fff8ec, #f2debf);
+  border-right: 1px solid rgba(165, 119, 59, 0.45);
   padding: 5rem 1rem 1rem;
-  transition: left 0.25s ease;
+  transition: left 0.3s ease;
   z-index: 15;
 }
 
@@ -201,7 +231,7 @@ h1 {
 
 .quick-nav a {
   display: block;
-  color: var(--text);
+  color: #4a3123;
   text-decoration: none;
   margin: 0.9rem 0;
 }
