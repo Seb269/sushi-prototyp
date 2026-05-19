@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sakura Sushi Bar | Prototyp</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <button class="quick-nav-toggle" id="quickNavToggle" aria-label="Öppna genvägar">
+      ☰
+    </button>
+
+    <aside class="quick-nav" id="quickNav" aria-label="Genvägar">
+      <h2>Genvägar</h2>
+      <nav>
+        <a href="#hero">Start</a>
+        <a href="#about">Om oss</a>
+        <a href="#menu">Meny</a>
+        <a href="#contact">Kontakt</a>
+      </nav>
+    </aside>
+
+    <header class="hero" id="hero">
+      <div class="overlay"></div>
+      <div class="hero-content">
+        <p class="kicker">伝統 · Trä · Smak</p>
+        <h1>Sakura Sushi Bar</h1>
+        <p>
+          En japansk traditionell bar-inspirerad sushiupplevelse med varm belysning,
+          handgjord sushi och en lugn atmosfär.
+        </p>
+        <a href="#menu" class="cta">Se prototyp meny</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="section" id="about">
+        <h2>Om oss</h2>
+        <p>
+          Sakura Sushi Bar är en prototyp för en hemsida med fokus på klassisk japansk
+          estetik: mörkt trä, papperslyktor och enkel elegans. Här skulle gäster få
+          uppleva sushi tillagad framför dem i en barliknande miljö.
+        </p>
+      </section>
+
+      <section class="section menu-section" id="menu">
+        <h2>Prototyp meny</h2>
+        <div class="menu-grid">
+          <article>
+            <h3>Nigiri</h3>
+            <ul>
+              <li>Lax Nigiri</li>
+              <li>Tonfisk Nigiri</li>
+              <li>Räka Nigiri</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Maki</h3>
+            <ul>
+              <li>California Roll</li>
+              <li>Spicy Tuna Roll</li>
+              <li>Avokado Maki</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Signatur</h3>
+            <ul>
+              <li>Sakura Omakase (8 bitar)</li>
+              <li>Chefens urval sashimi</li>
+              <li>Miso & edamame set</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <h2>Kontakt</h2>
+        <p><strong>Adress:</strong> Storgatan 12, 111 22 Stockholm</p>
+        <p><strong>Telefon:</strong> telefon nummer här</p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
