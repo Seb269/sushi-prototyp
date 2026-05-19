@@ -11,6 +11,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: "Inter", sans-serif;
@@ -122,17 +126,27 @@ h1 {
 }
 
 .menu-tab {
-  border: 1px solid rgba(182, 138, 82, 0.5);
-  background: #2b1b15;
+  border: 1px solid rgba(182, 138, 82, 0.45);
+  background: linear-gradient(180deg, #3a251d, #281813);
   color: var(--text);
   border-radius: 999px;
-  padding: 0.55rem 1rem;
+  padding: 0.65rem 1.15rem;
   cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.menu-tab:hover {
+  transform: translateY(-1px);
+  border-color: var(--gold);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.28);
 }
 
 .menu-tab.active {
-  background: var(--accent);
-  border-color: var(--accent);
+  background: linear-gradient(180deg, #cc4a4a, #a63131);
+  border-color: #d65d5d;
+  box-shadow: 0 10px 20px rgba(179, 58, 58, 0.35);
 }
 
 .menu-panel {
@@ -145,6 +159,12 @@ h1 {
 
 .menu-panel.active {
   display: block;
+  animation: panelFade 0.3s ease;
+}
+
+@keyframes panelFade {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .quick-nav-toggle {
