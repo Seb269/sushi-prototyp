@@ -1,0 +1,128 @@
+:root {
+  --bg: #0f0a08;
+  --surface: #1e1410;
+  --text: #f4ede6;
+  --accent: #b33a3a;
+  --gold: #b68a52;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Noto Serif JP", serif;
+}
+
+.hero {
+  min-height: 90vh;
+  display: grid;
+  place-items: center;
+  position: relative;
+  background: radial-gradient(circle at 20% 20%, #4a2a1f, #120c09 65%);
+  text-align: center;
+  padding: 2rem;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(15, 10, 8, 0.35), rgba(15, 10, 8, 0.85));
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+}
+
+.kicker {
+  letter-spacing: 0.2rem;
+  color: var(--gold);
+}
+
+h1 {
+  font-size: clamp(2.4rem, 8vw, 4.2rem);
+  margin: 0.2rem 0 1rem;
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 1rem;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  padding: 0.8rem 1.2rem;
+  border-radius: 999px;
+}
+
+.section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 4rem 1.2rem;
+}
+
+.menu-section {
+  background: var(--surface);
+  border-radius: 1rem;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.menu-grid article {
+  border: 1px solid rgba(182, 138, 82, 0.35);
+  border-radius: 0.8rem;
+  padding: 1rem;
+}
+
+.quick-nav-toggle {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 20;
+  border: 0;
+  background: var(--accent);
+  color: white;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.quick-nav {
+  position: fixed;
+  top: 0;
+  left: -260px;
+  width: 240px;
+  height: 100vh;
+  background: #1a100c;
+  border-right: 1px solid rgba(182, 138, 82, 0.35);
+  padding: 5rem 1rem 1rem;
+  transition: left 0.25s ease;
+  z-index: 15;
+}
+
+.quick-nav.open {
+  left: 0;
+}
+
+.quick-nav a {
+  display: block;
+  color: var(--text);
+  text-decoration: none;
+  margin: 0.9rem 0;
+}
