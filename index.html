@@ -72,15 +72,15 @@
         <p class="menu-intro">Klicka på en kategori för att se rätterna.</p>
 
         <div class="menu-tabs" role="tablist" aria-label="Menykategorier">
-          <button class="menu-tab active" data-category="nigiri">Nigiri</button>
-          <button class="menu-tab" data-category="maki">Maki</button>
-          <button class="menu-tab" data-category="sashimi">Sashimi</button>
-          <button class="menu-tab" data-category="varmt">Varmrätter</button>
-          <button class="menu-tab" data-category="dessert">Dessert</button>
+          <button type="button" class="menu-tab active" data-category="nigiri" role="tab" aria-selected="true">Nigiri</button>
+          <button type="button" class="menu-tab" data-category="maki" role="tab" aria-selected="false">Maki</button>
+          <button type="button" class="menu-tab" data-category="sashimi" role="tab" aria-selected="false">Sashimi</button>
+          <button type="button" class="menu-tab" data-category="varmt" role="tab" aria-selected="false">Varmrätter</button>
+          <button type="button" class="menu-tab" data-category="dessert" role="tab" aria-selected="false">Dessert</button>
         </div>
 
         <div class="menu-panels">
-          <article class="menu-panel active" data-category="nigiri">
+          <article class="menu-panel active" data-category="nigiri" role="tabpanel">
             <h3>Nigiri</h3>
             <ul>
               <li>Lax Nigiri</li>
@@ -92,7 +92,7 @@
             </ul>
           </article>
 
-          <article class="menu-panel" data-category="maki">
+          <article class="menu-panel" data-category="maki" role="tabpanel">
             <h3>Maki</h3>
             <ul>
               <li>California Roll</li>
@@ -104,7 +104,7 @@
             </ul>
           </article>
 
-          <article class="menu-panel" data-category="sashimi">
+          <article class="menu-panel" data-category="sashimi" role="tabpanel">
             <h3>Sashimi</h3>
             <ul>
               <li>Lax Sashimi (6 bitar)</li>
@@ -116,7 +116,7 @@
             </ul>
           </article>
 
-          <article class="menu-panel" data-category="varmt">
+          <article class="menu-panel" data-category="varmt" role="tabpanel">
             <h3>Varmrätter</h3>
             <ul>
               <li>Yakitori kycklingspett</li>
@@ -128,7 +128,7 @@
             </ul>
           </article>
 
-          <article class="menu-panel" data-category="dessert">
+          <article class="menu-panel" data-category="dessert" role="tabpanel">
             <h3>Dessert</h3>
             <ul>
               <li>Mochi glass (3 smaker)</li>
