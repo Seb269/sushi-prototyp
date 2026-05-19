@@ -13,9 +13,7 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <button class="quick-nav-toggle" id="quickNavToggle" aria-label="Öppna genvägar">
-      ☰
-    </button>
+    <button class="quick-nav-toggle" id="quickNavToggle" aria-label="Öppna genvägar">☰</button>
 
     <aside class="quick-nav" id="quickNav" aria-label="Genvägar">
       <h2>Genvägar</h2>
@@ -43,38 +41,100 @@
     <main>
       <section class="section" id="about">
         <h2>Om oss</h2>
-        <p>
-          Sakura Sushi Bar är en prototyp för en hemsida med fokus på klassisk japansk
-          estetik: mörkt trä, papperslyktor och enkel elegans. Här skulle gäster få
-          uppleva sushi tillagad framför dem i en barliknande miljö.
-        </p>
+        <div class="about-layout">
+          <div>
+            <p>
+              Sakura Sushi Bar är en prototyp för en hemsida med fokus på klassisk japansk
+              estetik: mörkt trä, papperslyktor och enkel elegans. Här skulle gäster få uppleva
+              sushi tillagad framför dem i en barliknande miljö där varje detalj är vald för att
+              skapa en lugn, varm och välkomnande känsla.
+            </p>
+            <p>
+              Vår idé är att kombinera traditionella tekniker med moderna smakprofiler. I baren
+              möter du kocken nära, ser råvarorna och får en personlig upplevelse av varje rätt.
+              Atmosfären inspireras av små izakaya-barer i Japan med fokus på hantverk, rytm och
+              respekt för ingredienser.
+            </p>
+            <p>
+              Denna prototyp visar hur hemsidan kan presentera berättelsen bakom restaurangen,
+              tydliga menyval och smidiga genvägar för gäster som snabbt vill hitta det de söker.
+            </p>
+          </div>
+          <figure class="chef-card">
+            <div class="chef-placeholder">Prototyp bild: här är kocken</div>
+            <figcaption>Här kan en riktig bild på kocken läggas till senare.</figcaption>
+          </figure>
+        </div>
       </section>
 
       <section class="section menu-section" id="menu">
         <h2>Prototyp meny</h2>
-        <div class="menu-grid">
-          <article>
+        <p class="menu-intro">Klicka på en kategori för att se rätterna.</p>
+
+        <div class="menu-tabs" role="tablist" aria-label="Menykategorier">
+          <button class="menu-tab active" data-category="nigiri">Nigiri</button>
+          <button class="menu-tab" data-category="maki">Maki</button>
+          <button class="menu-tab" data-category="sashimi">Sashimi</button>
+          <button class="menu-tab" data-category="varmt">Varmrätter</button>
+          <button class="menu-tab" data-category="dessert">Dessert</button>
+        </div>
+
+        <div class="menu-panels">
+          <article class="menu-panel active" data-category="nigiri">
             <h3>Nigiri</h3>
             <ul>
               <li>Lax Nigiri</li>
               <li>Tonfisk Nigiri</li>
               <li>Räka Nigiri</li>
+              <li>Ål Nigiri</li>
+              <li>Kammussla Nigiri</li>
+              <li>Flamberad lax nigiri</li>
             </ul>
           </article>
-          <article>
+
+          <article class="menu-panel" data-category="maki">
             <h3>Maki</h3>
             <ul>
               <li>California Roll</li>
               <li>Spicy Tuna Roll</li>
               <li>Avokado Maki</li>
+              <li>Tempura Ebi Roll</li>
+              <li>Dragon Roll</li>
+              <li>Philadelphia Roll</li>
             </ul>
           </article>
-          <article>
-            <h3>Signatur</h3>
+
+          <article class="menu-panel" data-category="sashimi">
+            <h3>Sashimi</h3>
             <ul>
-              <li>Sakura Omakase (8 bitar)</li>
-              <li>Chefens urval sashimi</li>
-              <li>Miso & edamame set</li>
+              <li>Lax Sashimi (6 bitar)</li>
+              <li>Tonfisk Sashimi (6 bitar)</li>
+              <li>Hamachi Sashimi</li>
+              <li>Mix Sashimi Deluxe</li>
+              <li>Bläckfisk sashimi</li>
+              <li>Kockens sashimiurval</li>
+            </ul>
+          </article>
+
+          <article class="menu-panel" data-category="varmt">
+            <h3>Varmrätter</h3>
+            <ul>
+              <li>Yakitori kycklingspett</li>
+              <li>Ramen med misobuljong</li>
+              <li>Teriyaki lax</li>
+              <li>Gyoza (5 st)</li>
+              <li>Karaage kyckling</li>
+              <li>Miso soppa deluxe</li>
+            </ul>
+          </article>
+
+          <article class="menu-panel" data-category="dessert">
+            <h3>Dessert</h3>
+            <ul>
+              <li>Mochi glass (3 smaker)</li>
+              <li>Matcha cheesecake</li>
+              <li>Yuzu sorbet</li>
+              <li>Sesam panna cotta</li>
             </ul>
           </article>
         </div>
@@ -82,7 +142,7 @@
 
       <section class="section" id="contact">
         <h2>Kontakt</h2>
-        <p><strong>Adress:</strong> Storgatan 12, 111 22 Stockholm</p>
+        <p><strong>Adress:</strong> adress här</p>
         <p><strong>Telefon:</strong> telefon nummer här</p>
       </section>
     </main>
